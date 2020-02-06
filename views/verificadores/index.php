@@ -15,9 +15,9 @@ $this->title = 'Registro Estatal de Inspectores y Verificadores';
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
+    <!--<p>
         <?= Html::a('Create Verificadores', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    </p>-->
     
     <?php         
         Modal::begin([

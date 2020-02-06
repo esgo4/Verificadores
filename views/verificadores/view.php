@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
         
          <div class="row" style=" " >
                 <div style="border-bottom: 1px solid #DDD; ">
-                    Informacion de contacto
+                    Información de contacto
                 </div>  
                 <div class="row">
                     <div class="col-md-6 col-xs-12">
