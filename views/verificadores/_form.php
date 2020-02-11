@@ -63,7 +63,7 @@ use kartik\depdrop\DepDrop;
     <?= $form->field($model, 'foto')->widget(FileInput::classname(), [
                       'options' => [
                       'accept' => 'img/*'],
-                      'pluginOptions' => ['allowedFileExtensions'=>['jpg','gif','png'],'previewFileType' => 'any','showUpload' => false]
+                      'pluginOptions' => ['allowedFileExtensions'=>['jpg','gif','png','jpeg'],'previewFileType' => 'any','showUpload' => false]
                       ]); ?>
 
     <div class="form-group">

@@ -8,7 +8,7 @@ use yii\bootstrap\Modal;
 /* @var $searchModel app\models\VerificadoresBuscar */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Registro Estatal de Inspectores y Verificadores';
+$this->title = 'Registro Municipal de Inspectores y Verificadores';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="verificadores-index screen">
@@ -21,7 +21,7 @@ $this->title = 'Registro Estatal de Inspectores y Verificadores';
     
     <?php         
         Modal::begin([
-                'header' => '<h4><center>Registro Estatal de Inspectores y Verificadores</center></h4>',
+                'header' => '<h4><center>Registro Municipal de Inspectores y Verificadores</center></h4>',
                 'id'     => 'modal',
                 'size'   => 'modal-lg',        
         ]);
@@ -32,13 +32,14 @@ $this->title = 'Registro Estatal de Inspectores y Verificadores';
     ?>
     
     <?php Pjax::begin(); ?>   
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        //'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         //'layout'=>"{sorter}\n{pager}\n{summary}\n{items}",
         'summary' => "Mostrando {totalCount} inspectores/verificadores",
+        'options' => ['class' => 'grid-view'],
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
 

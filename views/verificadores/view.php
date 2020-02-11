@@ -18,15 +18,15 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="" style=" float:left ; width: 200px">
                 <?php
                     if ($model->foto!='') {
-                      echo '<br /><p><img src="/img/'.$model->foto.'" alt="Verificador" height="180" width="180"></p>';
+                      echo '<p><img src="/img/'.$model->foto.'" alt="Verificador" height="200" width="180"></p>';
                     }    
                 ?>
             </div>
             <div class="col" style=" display: table-cell; width: 800px" >
-                <div style="border-bottom: 1px solid #DDD; ">
+                <div class="titlepop" style="border-bottom: 1px solid #DDD; ">
                     <?= $model->nom_completo?>
                 </div>  
-                <div class="row">
+                <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Dependencia: </p>
                     </div>
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->secretaria0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Unidad Administrativa: </p>
                     </div>
@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->direccion0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Cargo: </p>
                     </div>
@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->cargo0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Capacidad para verificar: </p>
                     </div>
@@ -61,11 +61,11 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>                       
         </div>
         
-         <div class="row" style=" " >
-                <div style="border-bottom: 1px solid #DDD; ">
+         <div class="row" >
+                <div class="titlepop" style="border-bottom: 1px solid #DDD; ">
                     Información de contacto
                 </div>  
-                <div class="row">
+                <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Domicilio de la dependencia: </p>
                     </div>
@@ -73,7 +73,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->secretaria0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Teléfóno de contacto: </p>
                     </div>
@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->direccion0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Funcionario que coordina la visita: </p>
                     </div>
@@ -89,7 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->cargo0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Teléfono del funcionario: </p>
                     </div>
@@ -97,7 +97,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->cargo0->capacidad?>
                     </div>
                 </div>
-             <div class="row">
+             <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Correo electrónico del funcionario: </p>
                     </div>
@@ -107,11 +107,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>  
         
-        <div class="row" style=" " >
-                <div style="border-bottom: 1px solid #DDD; ">
+        <div class="row" >
+                <div class="titlepop" style="border-bottom: 1px solid #DDD; ">
                     Informacion adicional
                 </div>  
-                <div class="row">
+                <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Fundamento jurídico: </p>
                     </div>
@@ -119,7 +119,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->secretaria0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Inspecciones o verificaciones durante 2017: </p>
                     </div>
@@ -127,7 +127,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->direccion0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Inspecciones o verificaciones durante 2018: </p>
                     </div>
@@ -135,7 +135,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          <?= $model->cargo0->nombre?>
                     </div>
                 </div>
-                 <div class="row">
+                 <div class="row contentpop">
                     <div class="col-md-6 col-xs-12">
                         <p>Inspecciones o verificaciones durante 2019: </p>
                     </div>
