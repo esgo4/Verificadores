@@ -11,35 +11,45 @@ use yii\bootstrap\Modal;
 $this->title = 'Registro Municipal de Inspectores y Verificadores';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="verificadores-index screen">
+<div class="verificadores-index screen" style="font-family: 'Montserrat';">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="row" style="text-align: center">        
+        <div  class="col-md-12 col-xs-12 ">
+           <img src="/images/banner.jpeg" alt="Banner" width="1000" height="250">
+        </div>
+    </div>
+    
+    <br>
+    <br>
 
     <!--<p>
         <?= Html::a('Create Verificadores', ['create'], ['class' => 'btn btn-success']) ?>
     </p>-->
+   
+    <?php Pjax::begin(); ?>  
     
     <?php         
         Modal::begin([
-                'header' => '<h4><center>Registro Municipal de Inspectores y Verificadores</center></h4>',
+                'header' => '<h4 class"modalV"><center>Registro Municipal de Inspectores y Verificadores</center></h4>',
                 'id'     => 'modal',
                 'size'   => 'modal-lg',        
         ]);
 
-        echo "<div id='modalContent'></div>";
+       echo '<div id="modalContent"><div style="text-align:center"><img src="'. yii\helpers\Url::to('/img/load_1.gif').'"></div></div>';
 
         Modal::end();
     ?>
     
-    <?php Pjax::begin(); ?>   
+    
     <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+    <br><br>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         //'layout'=>"{sorter}\n{pager}\n{summary}\n{items}",
         'summary' => "Mostrando {totalCount} inspectores/verificadores",
-        'options' => ['class' => 'grid-view'],
+        'options' => ['class' => 'viewGrid'],
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
 

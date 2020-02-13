@@ -21,6 +21,27 @@ and open the template in the editor.
 }
 
 .contentSearch{
-    background: #f6f4e6;
+    background: #5b5656;
     border-radius: 5px;
+    color: white;
+    font-family: 'Montserrat';
 }
+ 
+
+body{
+    background: #ffffff;
+}
+
+.viewGrid table thead {
+     background-color: #eeeeee;
+     color: white;
+}
+
+.viewGrid table th tr {
+      border: 1px solid black;
+}
+
+.modalV{
+    background: #d4d7dd;
+}
+

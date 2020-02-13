@@ -34,19 +34,26 @@ use yii\widgets\ActiveForm;
         </div>
         <div class="col-md-8 col-xs-12"> 
             <?php
-                $tipos = \app\models\Secretarias::find()->all();
-                $lista = yii\helpers\ArrayHelper::map($tipos, 'id', 'nombre')     
+                $tiposS = \app\models\Secretarias::find()->all();
+                $listaS = yii\helpers\ArrayHelper::map($tiposS, 'id', 'nombre')     
                     ?>        
-                     <?= $form->field($model, 'secretaria' )->dropDownList($lista, ['prompt'=> 'Selecciona','style'=>'width:']) ?>
+                     <?= $form->field($model, 'secretaria' )->dropDownList($listaS, ['prompt'=> 'Selecciona','style'=>'width:']) ?>
            
         </div>
         <div class="col-md-4 col-xs-12">
-            <?=  $form->field($model, 'nom_completo')->label('Nombre') ?>
+            <?php
+                $tiposC = \app\models\Cargos::find()->all();
+                $listaC = yii\helpers\ArrayHelper::map($tiposC, 'id', 'nombre')     
+            ?>        
+            <?= $form->field($model, 'cargo' )->dropDownList($listaC, ['prompt'=> 'Selecciona','style'=>'width:']) ?>
         </div>
         <div  class="col-md-4 col-xs-12">
-             <?= Html::submitButton('Buscar', ['class' => 'btn btn-primary']) ?>
+             <?= Html::submitButton('Buscar', ['class' => 'btn btn-info']) ?>
             <?php // Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>
+            <br>
+            <br>
         </div>
+        
          
     </div>
         
