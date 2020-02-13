@@ -11,28 +11,19 @@ use kartik\depdrop\DepDrop;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
+
+
 <div class="verificadores-form">
 
     <?php $form = ActiveForm::begin(); ?>
-    <?php         
-        yii\bootstrap\Modal::begin([
-                'header' => '<h4 class"modalV"><center>Registro Municipal de Inspectores y Verificadores</center></h4>',
-                'id'     => 'modal',
-                'size'   => 'modal-lg',        
-        ]);
-
-       echo '<div id="modalContent"><div style="text-align:center"><img src="'. yii\helpers\Url::to('/img/load_1.gif').'"></div></div>';
-
-        yii\bootstrap\Modal::end();
-    ?>
     
      <div class="panel panel-success">
         <div class="panel-heading">
-            <i class="fa fa-info-circle"></i> Nuevo verificador
+            <i class="fas fa-address-card"></i> Nuevo verificador
         </div>
         <div class="panel-body">
             <div class="col-xs-12 col-sm-12 col-lg-12 no-padding">
-                <div class="col-xs-12 col-sm-4 col-lg-4">
+                 <div class="col-xs-12 col-sm-4 col-lg-4">
                      <?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
                 </div> 
                 
@@ -47,6 +38,7 @@ use kartik\depdrop\DepDrop;
                 <div class="col-xs-12 col-sm-4 col-lg-4">
                     <?= $form->field($model, 'no_empleado')->textInput(['maxlength' => true]) ?>
                 </div>
+                
                  <div class="col-xs-12 col-sm-4 col-lg-4">
                      <?= $form->field($model, 'secretaria')->widget(Select2::classname(), [
                                         'data' => $dependencias_organizaciones,
@@ -83,10 +75,14 @@ use kartik\depdrop\DepDrop;
                     ?>        
                      <?= $form->field($model, 'cargo' )->dropDownList($lista, ['prompt'=> 'Selecciona','style'=>'width:']) ?>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <?= Html::a('Nuevo cargo', ['cargos/create'], ['class' => 'btn btn-info modalButton']) ?>
-                </div>
                 
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <?= $form->field($model, 'foto')->widget(FileInput::classname(), [
+                                  'options' => [
+                                  'accept' => 'img/*'],
+                                  'pluginOptions' => ['allowedFileExtensions'=>['jpg','gif','png','jpeg'],'previewFileType' => 'any','showUpload' => false]
+                                  ]); ?>
+                </div>
                 
             </div>
         </div>
@@ -96,19 +92,13 @@ use kartik\depdrop\DepDrop;
 
     <!--<?= $form->field($model, 'foto')->textInput(['maxlength' => true]) ?>-->
     
-    <div class="col-xs-12 col-sm-12 col-lg-12">
-        <?= $form->field($model, 'foto')->widget(FileInput::classname(), [
-                      'options' => [
-                      'accept' => 'img/*'],
-                      'pluginOptions' => ['allowedFileExtensions'=>['jpg','gif','png','jpeg'],'previewFileType' => 'any','showUpload' => false]
-                      ]); ?>
-    </div>
+    
     
 
     <div class="form-group">
         <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
     </div>
-
+      
     <?php ActiveForm::end(); ?>
 
 </div>

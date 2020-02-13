@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Verificadores */
 
-$this->title = 'Nuevo Verificador';
+//$this->title = 'Nuevo Verificador';
 //$this->params['breadcrumbs'][] = ['label' => 'Verificadores', 'url' => ['index']];
 //$this->params['breadcrumbs'][] = $this->title;
 ?>

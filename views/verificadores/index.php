@@ -15,7 +15,7 @@ $this->title = 'Registro Municipal de Inspectores y Verificadores';
 
     <div class="row" style="text-align: center">        
         <div  class="col-md-12 col-xs-12 ">
-           <img src="/images/banner.jpeg" alt="Banner" width="1000" height="250">
+           <img src="/image/banner.jpeg" alt="Banner" width="1000" height="250">
         </div>
     </div>
     
@@ -30,12 +30,12 @@ $this->title = 'Registro Municipal de Inspectores y Verificadores';
     
     <?php         
         Modal::begin([
-                'header' => '<h4 class"modalV"><center>Registro Municipal de Inspectores y Verificadores</center></h4>',
+                'header' => '<h4><center>Registro Municipal de Inspectores y Verificadores</center></h4>',
                 'id'     => 'modal',
                 'size'   => 'modal-lg',        
         ]);
 
-       echo '<div id="modalContent"><div style="text-align:center"><img src="'. yii\helpers\Url::to('/img/load_1.gif').'"></div></div>';
+       echo '<div id="modalContent"><div style="text-align:center"><img src="'. yii\helpers\Url::to('/image/load_1.gif').'"></div></div>';
 
         Modal::end();
     ?>
