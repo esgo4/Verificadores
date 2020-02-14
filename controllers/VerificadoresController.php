@@ -98,6 +98,7 @@ class VerificadoresController extends Controller
      */
     public function actionUpdate($id)
     {
+        $dependencias_organizaciones = \yii\helpers\ArrayHelper::map(\app\models\Secretarias::find()->all(), 'id', 'nombre');
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -106,6 +107,7 @@ class VerificadoresController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'dependencias_organizaciones' => $dependencias_organizaciones,
         ]);
     }
 
