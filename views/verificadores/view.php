@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Dependencia: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->secretaria0->nombre?>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Unidad Administrativa: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?php 
                         if($model->direccion0 == null){
                             echo "--";
@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Cargo: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->cargo0->nombre?>
                     </div>
                 </div>
@@ -58,8 +58,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Capacidad para verificar: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->cargo0->capacidad?>
+                    </div>
+                </div>
+                <div class="row contentpop">
+                    <div class="col-md-6 col-xs-12">
+                        <p>Vigencia de cargo: </p>
+                    </div>
+                    <div class="col-md-6 col-xs-12 datapop">
+                        <p>Indefinida</p>
                     </div>
                 </div>
             </div>                       
@@ -73,15 +81,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Domicilio de la dependencia: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->secretaria0->nombre?>
                     </div>
                 </div>
                  <div class="row contentpop">
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 ">
                         <p>Teléfóno de contacto: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?php 
                         if($model->direccion0 == null){
                             echo "--";
@@ -90,18 +98,18 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                  <div class="row contentpop">
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 ">
                         <p>Funcionario que coordina la visita: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->cargo0->nombre?>
                     </div>
                 </div>
                  <div class="row contentpop">
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 ">
                         <p>Teléfono del funcionario: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->cargo0->capacidad?>
                     </div>
                 </div>
@@ -109,7 +117,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Correo electrónico del funcionario: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->cargo0->capacidad?>
                     </div>
                 </div>
@@ -123,7 +131,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Fundamento jurídico: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->secretaria0->nombre?>
                     </div>
                 </div>
@@ -131,7 +139,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Inspecciones o verificaciones durante 2017: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?php 
                         if($model->direccion0 == null){
                             echo "--";
@@ -143,7 +151,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Inspecciones o verificaciones durante 2018: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->cargo0->nombre?>
                     </div>
                 </div>
@@ -151,7 +159,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6 col-xs-12">
                         <p>Inspecciones o verificaciones durante 2019: </p>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 datapop">
                          <?= $model->cargo0->capacidad?>
                     </div>
                 </div>

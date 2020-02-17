@@ -7,6 +7,12 @@ and open the template in the editor.
     Created on : 10/02/2020, 09:56:11 AM
     Author     : Esaul
 */
+.datapop{
+    font-size: 18px;
+    color: black;
+    
+    font-family: 'Montserrat'
+}
 
 .titlepop{
     font-size: 20px;
