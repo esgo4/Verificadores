@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=registro_ins_ver',
+    'dsn' => 'mysql:host=localhost;dbname=verificadores',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

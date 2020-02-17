@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="" style=" float:left ; width: 200px">
                 <?php
                     if ($model->foto!='') {
-                      echo '<p><img src="/img/'.$model->foto.'" alt="Verificador" height="200" width="180"></p>';
+                      echo '<p><img src="/img/'.$model->foto.'" alt="Verificador" height="200" width="150"></p>';
                     }    
                 ?>
             </div>
@@ -39,7 +39,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         <p>Unidad Administrativa: </p>
                     </div>
                     <div class="col-md-6 col-xs-12">
-                         <?= $model->direccion0->nombre?>
+                         <?php 
+                        if($model->direccion0 == null){
+                            echo "--";
+                        }
+                        ?>
                     </div>
                 </div>
                  <div class="row contentpop">
@@ -78,7 +82,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         <p>Teléfóno de contacto: </p>
                     </div>
                     <div class="col-md-6 col-xs-12">
-                         <?= $model->direccion0->nombre?>
+                         <?php 
+                        if($model->direccion0 == null){
+                            echo "--";
+                        }
+                        ?>
                     </div>
                 </div>
                  <div class="row contentpop">
@@ -124,7 +132,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         <p>Inspecciones o verificaciones durante 2017: </p>
                     </div>
                     <div class="col-md-6 col-xs-12">
-                         <?= $model->direccion0->nombre?>
+                         <?php 
+                        if($model->direccion0 == null){
+                            echo "--";
+                        }
+                        ?>
                     </div>
                 </div>
                  <div class="row contentpop">
