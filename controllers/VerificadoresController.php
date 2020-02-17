@@ -101,8 +101,16 @@ class VerificadoresController extends Controller
         $dependencias_organizaciones = \yii\helpers\ArrayHelper::map(\app\models\Secretarias::find()->all(), 'id', 'nombre');
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())  ) {
+                //Try to get file info
+            if(($upload_image = \yii\web\UploadedFile::getInstance($model, 'foto'))!== null){
+                        $image_name = $upload_image->name;
+                        $model->foto = $image_name;
+                        $upload_image->saveAs('img/' . $image_name);
+                    }
+                    
+            $model->save();
+            return $this->redirect('index');
         }
 
         return $this->render('update', [

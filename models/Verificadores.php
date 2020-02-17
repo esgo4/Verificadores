@@ -38,7 +38,7 @@ class Verificadores extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre', 'paterno','materno','no_empleado','secretaria','direccion','foto', 'cargo'], 'required','message'=>'No puede estar vacío'],
+            [['nombre', 'paterno','materno','no_empleado','foto', 'cargo'], 'required','message'=>'No puede estar vacío'],
             [['secretaria', 'direccion', 'cargo'], 'integer'],
             [['nombre', 'paterno', 'materno', 'nom_completo', 'foto'], 'string', 'max' => 100],
             [['no_empleado'], 'string', 'max' => 10],
