@@ -89,9 +89,9 @@ $this->title = 'Registro Municipal de Inspectores y Verificadores';
             ],
             //'foto',
 
-//            ['class' => 'yii\grid\ActionColumn',
-//                'template'=> '{view}{update}'
-//                ],
+            ['class' => 'yii\grid\ActionColumn',
+                'template'=> '{view}{update}'
+                ],
         ],
     ]); 
             ?>

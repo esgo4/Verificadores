@@ -17,8 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row" >
             <div class="" style=" float:left ; width: 200px">
                 <?php
-                    if ($model->foto!='') {
-                      echo '<p><img src="/img/'.$model->foto.'" alt="Verificador" height="200" width="150"></p>';
+                    if ($model->foto == null) {
+                        echo '<p><img src="/image/not-found_1.png" alt="Verificador" height="200" width="150"></p>';
+                      
+                    }else{
+                        echo '<p><img src="/img/'.$model->foto.'" alt="Verificador" height="200" width="150"></p>';
                     }    
                 ?>
             </div>

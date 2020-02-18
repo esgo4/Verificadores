@@ -11,7 +11,7 @@
  Target Server Version : 100406
  File Encoding         : 65001
 
- Date: 17/02/2020 11:51:59
+ Date: 18/02/2020 14:49:38
 */
 
 SET NAMES utf8mb4;
@@ -27,7 +27,7 @@ CREATE TABLE `cargos`  (
   `capacidad` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `activo` tinyint(3) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 34 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of cargos
@@ -46,6 +46,25 @@ INSERT INTO `cargos` VALUES (11, 'COORDINADOR GENERAL DE INSPECTORES AMBIENTALES
 INSERT INTO `cargos` VALUES (12, 'INSPECTOR AMBIENTAL', NULL, 1);
 INSERT INTO `cargos` VALUES (13, 'INSPECTOR AMBIENTAL ESPECIALIZADO/ PROFESIONISTA', NULL, 1);
 INSERT INTO `cargos` VALUES (14, 'VERIFICADOR SANITARIO', NULL, 1);
+INSERT INTO `cargos` VALUES (15, 'Inspector Especial', NULL, 1);
+INSERT INTO `cargos` VALUES (16, 'Supervisor Operacion', NULL, 1);
+INSERT INTO `cargos` VALUES (17, 'Supervisor Operacion A', NULL, 1);
+INSERT INTO `cargos` VALUES (18, 'Supervisor General de Operacion', NULL, 1);
+INSERT INTO `cargos` VALUES (19, 'Sup de Instalaciones Domiciliarias', NULL, 1);
+INSERT INTO `cargos` VALUES (20, 'Auxiliar de Supervision Comercializacion', NULL, 1);
+INSERT INTO `cargos` VALUES (21, 'Inspector B', NULL, 1);
+INSERT INTO `cargos` VALUES (22, 'Supervisor General', NULL, 1);
+INSERT INTO `cargos` VALUES (23, 'Inspector A', NULL, 1);
+INSERT INTO `cargos` VALUES (24, 'Supervisor de Obra', NULL, 1);
+INSERT INTO `cargos` VALUES (25, 'Gestor de Cobro A', NULL, 1);
+INSERT INTO `cargos` VALUES (26, 'Encargado Supervisor de Cobranza', NULL, 1);
+INSERT INTO `cargos` VALUES (27, 'Gestor de Cobro B', NULL, 1);
+INSERT INTO `cargos` VALUES (28, 'Aux Supervisor de Planeacion', NULL, 1);
+INSERT INTO `cargos` VALUES (29, 'Auxiliar de Mantenimiento B', NULL, 1);
+INSERT INTO `cargos` VALUES (30, 'Intendencia', NULL, 1);
+INSERT INTO `cargos` VALUES (31, 'Encargado del area de Desc Residuales', NULL, 1);
+INSERT INTO `cargos` VALUES (32, 'Ayudante Diverso', NULL, 1);
+INSERT INTO `cargos` VALUES (33, 'Inspector de Operaciones', NULL, 1);
 
 -- ----------------------------
 -- Table structure for direcciones
@@ -157,12 +176,12 @@ CREATE TABLE `verificadores`  (
   CONSTRAINT `fk_cargos` FOREIGN KEY (`cargo`) REFERENCES `cargos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `verificadores_ibfk_1` FOREIGN KEY (`direccion`) REFERENCES `direcciones` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `verificadores_ibfk_4` FOREIGN KEY (`secretaria`) REFERENCES `secretarias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 85 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 134 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of verificadores
 -- ----------------------------
-INSERT INTO `verificadores` VALUES (1, 'AGUSTIN', 'PLANCARTE', 'MAGAÑA', 'AGUSTIN PLANCARTE MAGAÑA', NULL, 1, NULL, 1, 'AGUSTIN-PLANCARTE-MAGAÑA.png');
+INSERT INTO `verificadores` VALUES (1, 'AGUSTIN', 'PLANCARTE', 'MAGAÑA', 'AGUSTIN PLANCARTE MAGAÑA', NULL, 1, 5, 1, 'AGUSTIN-PLANCARTE-MAGAÑA.png');
 INSERT INTO `verificadores` VALUES (2, 'EMMA', 'BRAVO', 'RUBIO', 'EMMA BRAVO RUBIO', NULL, 2, 5, 1, 'EMMA-BRAVO-RUBIO.png');
 INSERT INTO `verificadores` VALUES (3, 'EDUARDO ALEJANDRO', 'OLALDE', 'RUIZ', 'EDUARDO ALEJANDRO OLALDE RUIZ', NULL, 2, 5, 1, 'EDUARDO ALEJANDRO-OLALDE-RUIZ.png');
 INSERT INTO `verificadores` VALUES (4, 'MIGUEL ANGEL', 'REYES', 'MENDEZ', 'MIGUEL ANGEL REYES MENDEZ', NULL, 2, 5, 1, 'MIGUEL ANGEL-REYES-MENDEZ.png');
@@ -246,5 +265,54 @@ INSERT INTO `verificadores` VALUES (81, 'ERIK', 'RODRIGUEZ', 'CARRILLO', 'ERIK R
 INSERT INTO `verificadores` VALUES (82, 'CUITLAHUAC CUAUHTEMOC', 'ARIAS', 'MONTES', 'CUITLAHUAC CUAUHTEMOC ARIAS MONTES', NULL, 10, 22, 8, 'CUITLAHUAC CUAUHTEMOC-ARIAS-MONTES.png');
 INSERT INTO `verificadores` VALUES (83, 'GERARDO', 'BECERRA', 'CARRILLO', 'GERARDO BECERRA CARRILLO', NULL, 10, 22, 13, 'GERARDO-BECERRA-CARRILLO.png');
 INSERT INTO `verificadores` VALUES (84, 'JOSE HUGO', 'GUERRERO', 'PACHECO', 'JOSE HUGO GUERRERO PACHECO', NULL, 10, 23, 14, 'JOSE HUGO-GUERRERO-PACHECO.png');
+INSERT INTO `verificadores` VALUES (85, 'Martin', 'Alfaro', 'Huanosto', 'Martin Alfaro Huanosto', '000', 17, NULL, 15, 'Martin-Alfaro-Huanosto.png');
+INSERT INTO `verificadores` VALUES (86, 'Heriberto', 'Barriga', 'Torres', 'Heriberto Barriga Torres', '000', 17, NULL, 16, 'Heriberto-Barriga-Torres.png');
+INSERT INTO `verificadores` VALUES (87, 'Sergio', 'Campos', 'Acuña', 'Sergio Campos Acuña', '000', 17, NULL, 15, 'Sergio-Campos-Acuña.png');
+INSERT INTO `verificadores` VALUES (88, 'Leobardo', 'Fernandez', 'Paredes', 'Leobardo Fernandez Paredes', '000', 17, NULL, 17, 'Leobardo-Fernandez-Paredes.png');
+INSERT INTO `verificadores` VALUES (89, 'Gerardo', 'Gaytan', 'Pineda', 'Gerardo Gaytan Pineda', '000', 17, NULL, 7, 'Gerardo-Gaytan-Pineda.png');
+INSERT INTO `verificadores` VALUES (90, 'Juan Gabriel', 'Gonzalez', 'Chavez', 'Juan Gabriel Gonzalez Chavez', '000', 17, NULL, 18, 'Juan Gabriel-Gonzalez-Chavez.png');
+INSERT INTO `verificadores` VALUES (91, 'Sergio German', 'Gonzalez', 'Serano', 'Sergio German Gonzalez Serano', '000', 17, NULL, 15, 'Sergio German-Gonzalez-Serano.png');
+INSERT INTO `verificadores` VALUES (92, 'Alvaro Francisco', 'Lopez', 'Orozco', 'Alvaro Francisco Lopez Orozco', '000', 17, NULL, 19, 'Alvaro Francisco-Lopez-Orozco.png');
+INSERT INTO `verificadores` VALUES (93, 'Miguel', 'Pacheco', 'Soria', 'Miguel Pacheco Soria', '000', 17, NULL, 20, 'Miguel-Pacheco-Soria.png');
+INSERT INTO `verificadores` VALUES (94, 'Roberto', 'Paramo', 'Fernandez', 'Roberto Paramo Fernandez', '000', 17, NULL, 21, 'Roberto-Paramo-Fernandez.png');
+INSERT INTO `verificadores` VALUES (95, 'Francisco Samuel', 'Saenz', 'Vilchis', 'Francisco Samuel Saenz Vilchis', '000', 17, NULL, 22, 'Francisco Samuel-Saenz-Vilchis.png');
+INSERT INTO `verificadores` VALUES (96, 'Nicolas', 'Vargas', 'Garcia', 'Nicolas Vargas Garcia', '000', 17, NULL, 22, 'Nicolas-Vargas-Garcia.png');
+INSERT INTO `verificadores` VALUES (97, 'Salvador', 'Gonzalez', 'Serano', 'Salvador Gonzalez Serano', '000', 17, NULL, 23, 'Salvador-Gonzalez-Serano.png');
+INSERT INTO `verificadores` VALUES (98, 'Fernando', 'Rico', 'Lagunas', 'Fernando Rico Lagunas', '000', 17, NULL, 15, 'Fernando-Rico-Lagunas.png');
+INSERT INTO `verificadores` VALUES (99, 'Abraham', 'Huerta', 'Oseguera', 'Abraham Huerta Oseguera', '000', 17, NULL, 15, 'Abraham-Huerta-Oseguera.png');
+INSERT INTO `verificadores` VALUES (100, 'Jose Saul', 'Guillen', 'Barriga', 'Jose Saul Guillen Barriga', '000', 17, NULL, 23, 'Jose Saul-Guillen-Barriga.png');
+INSERT INTO `verificadores` VALUES (101, 'Alberto', 'Diaz', 'Avila', 'Alberto Diaz Avila', '000', 17, NULL, 24, 'Alberto-Diaz-Avila.png');
+INSERT INTO `verificadores` VALUES (102, 'Jesus Manuel', 'Zaragoza', '.', 'Jesus Manuel Zaragoza .', '000', 17, NULL, 25, 'Jesus Manuel-Zaragoza-..png');
+INSERT INTO `verificadores` VALUES (103, 'Manuel', 'De La Torre', 'Mendez', 'Manuel De La Torre Mendez', '000', 17, NULL, 23, 'Manuel-De La Torre-Mendez.png');
+INSERT INTO `verificadores` VALUES (104, 'Adriana', 'Vidales', 'Landin', 'Adriana Vidales Landin', '000', 17, NULL, 23, 'Adriana-Vidales-Landin.png');
+INSERT INTO `verificadores` VALUES (105, 'Gregorio', 'Vilchis', 'Beltran', 'Gregorio Vilchis Beltran', '000', 17, NULL, 15, 'Gregorio-Vilchis-Beltran.png');
+INSERT INTO `verificadores` VALUES (106, 'Patricia Teresa', 'Martinez', 'Urtiz', 'Patricia Teresa Martinez Urtiz', '000', 17, NULL, 21, 'Patricia Teresa-Martinez-Urtiz.png');
+INSERT INTO `verificadores` VALUES (107, 'Ma De Los Angeles', 'Piñon', 'Ramos', 'Ma De Los Angeles Piñon Ramos', '000', 17, NULL, 23, 'Ma De Los Angeles-Piñon-Ramos.png');
+INSERT INTO `verificadores` VALUES (108, 'Alfredo', 'Rocha', 'Alvarado', 'Alfredo Rocha Alvarado', '000', 17, NULL, 26, 'Alfredo-Rocha-Alvarado.png');
+INSERT INTO `verificadores` VALUES (109, 'Eduardo', 'Martinez', 'Correa', 'Eduardo Martinez Correa', '000', 17, NULL, 15, 'Eduardo-Martinez-Correa.png');
+INSERT INTO `verificadores` VALUES (110, 'Luis', 'Reyes', 'Arellano', 'Luis Reyes Arellano', '000', 17, NULL, 25, 'Luis-Reyes-Arellano.png');
+INSERT INTO `verificadores` VALUES (111, 'Juan Carlos', 'Tapia', 'Lopez', 'Juan Carlos Tapia Lopez', '000', 17, NULL, 21, 'Juan Carlos-Tapia-Lopez.png');
+INSERT INTO `verificadores` VALUES (112, 'Dante', 'Ceron', 'Perez', 'Dante Ceron Perez', '000', 17, NULL, 27, 'Dante-Ceron-Perez.png');
+INSERT INTO `verificadores` VALUES (113, 'Jose Luis', 'Acosta', 'Bribiesca', 'Jose Luis Acosta Bribiesca', '000', 17, NULL, 23, 'Jose Luis-Acosta-Bribiesca.png');
+INSERT INTO `verificadores` VALUES (114, 'Rodrigo Daniel', 'Tovar', 'Villagomez', 'Rodrigo Daniel Tovar Villagomez', '000', 17, NULL, 27, 'Rodrigo Daniel-Tovar-Villagomez.png');
+INSERT INTO `verificadores` VALUES (115, 'Jorge Luis', 'Lopez', 'Lucas', 'Jorge Luis Lopez Lucas', '000', 17, NULL, 17, 'Jorge Luis-Lopez-Lucas.png');
+INSERT INTO `verificadores` VALUES (116, 'Javier', 'Solis', 'Solis', 'Javier Solis Solis', '000', 17, NULL, 21, 'Javier-Solis-Solis.png');
+INSERT INTO `verificadores` VALUES (117, 'Mario', 'Ortiz', 'Rivera', 'Mario Ortiz Rivera', '000', 17, NULL, 15, 'Mario-Ortiz-Rivera.png');
+INSERT INTO `verificadores` VALUES (118, 'Fatima Elizabeth', 'Gutierrez', 'Espinoza', 'Fatima Elizabeth Gutierrez Espinoza', '000', 17, NULL, 21, 'Fatima Elizabeth-Gutierrez-Espinoza.png');
+INSERT INTO `verificadores` VALUES (119, 'Gerardo Rafael', 'Candelario', 'Damian', 'Gerardo Rafael Candelario Damian', '000', 17, NULL, 28, 'Gerardo Rafael-Candelario-Damian.png');
+INSERT INTO `verificadores` VALUES (120, 'Edgar Armando', 'Herrera', 'Equihua', 'Edgar Armando Herrera Equihua', '000', 17, NULL, 27, 'Edgar Armando-Herrera-Equihua.png');
+INSERT INTO `verificadores` VALUES (121, 'Norma Leticia', 'Lagunas', 'Tapia', 'Norma Leticia Lagunas Tapia', '000', 17, NULL, 21, 'Norma Leticia-Lagunas-Tapia.png');
+INSERT INTO `verificadores` VALUES (122, 'Maria Concepcion', 'Espinoza', 'Sanchez', 'Maria Concepcion Espinoza Sanchez', '000', 17, NULL, 21, 'Maria Concepcion-Espinoza-Sanchez.png');
+INSERT INTO `verificadores` VALUES (123, 'Salvador', 'Garcia', 'Villaseñor', 'Salvador Garcia Villaseñor', '000', 17, NULL, 29, 'Salvador-Garcia-Villaseñor.png');
+INSERT INTO `verificadores` VALUES (124, 'Alma Angelica', 'Gonzalez', 'Barrera', 'Alma Angelica Gonzalez Barrera', '000', 17, NULL, 30, 'Alma Angelica-Gonzalez-Barrera.png');
+INSERT INTO `verificadores` VALUES (125, 'Filiberto', 'Avila', 'Zaragoza', 'Filiberto Avila Zaragoza', '000', 17, NULL, 27, 'Filiberto-Avila-Zaragoza.png');
+INSERT INTO `verificadores` VALUES (126, 'Alberto', 'Reyes', 'Guizar', 'Alberto Reyes Guizar', '000', 17, NULL, 21, 'Alberto-Reyes-Guizar.png');
+INSERT INTO `verificadores` VALUES (127, 'Daniela', 'Sotelo', 'Hernandez', 'Daniela Sotelo Hernandez', '000', 17, NULL, 21, 'Daniela-Sotelo-Hernandez.png');
+INSERT INTO `verificadores` VALUES (128, 'Luis Ivan', 'Anguiano', 'Martinez', 'Luis Ivan Anguiano Martinez', '000', 17, NULL, 21, 'Luis Ivan-Anguiano-Martinez.png');
+INSERT INTO `verificadores` VALUES (129, 'Uriel Omar', 'Miguel', 'Esparza', 'Uriel Omar Miguel Esparza', '000', 17, NULL, 31, 'Uriel Omar-Miguel-Esparza.png');
+INSERT INTO `verificadores` VALUES (130, 'Jesus Angel', 'Alvarado', 'Sánchez', 'Jesus Angel Alvarado Sánchez', '000', 17, NULL, 32, 'Jesus Angel-Alvarado-Sánchez.png');
+INSERT INTO `verificadores` VALUES (131, 'Merari Betsabe', 'Garcia', 'Villaseñor', 'Merari Betsabe Garcia Villaseñor', '000', 17, NULL, 32, 'Merari Betsabe-Garcia-Villaseñor.png');
+INSERT INTO `verificadores` VALUES (132, 'Maria De Los Angeles', 'Talavera', 'Sanchez', 'Maria De Los Angeles Talavera Sanchez', '000', 17, NULL, 32, 'Maria De Los Angeles-Talavera-Sanchez.png');
+INSERT INTO `verificadores` VALUES (133, 'Luis Joaquin', 'Gutierrez', 'Muciño', 'Luis Joaquin Gutierrez Muciño', '000', 17, NULL, 33, 'Luis Joaquin-Gutierrez-Muciño.png');
 
 SET FOREIGN_KEY_CHECKS = 1;
