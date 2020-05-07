@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="titlepop" style="border-bottom: 1px solid #DDD; ">
                     <?= $model->nom_completo?>
                 </div>  
-                <div class="row contentpop">
+                <div class="row contentpop" style="margin-top: 10px;">
                     <div class="col-md-6 col-xs-12">
                         <p>Dependencia: </p>
                     </div>
@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="titlepop" style="border-bottom: 1px solid #DDD; ">
                     Información de contacto
                 </div>  
-                <div class="row contentpop">
+                <div class="row contentpop" style="margin-top: 10px;">
                     <div class="col-md-6 col-xs-12">
                         <p>Domicilio de la dependencia: </p>
                     </div>
@@ -130,7 +130,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="titlepop" style="border-bottom: 1px solid #DDD; ">
                     Informacion adicional
                 </div>  
-                <div class="row contentpop">
+                <div class="row contentpop" style="margin-top: 10px;">
                     <div class="col-md-6 col-xs-12">
                         <p>Fundamento jurídico: </p>
                     </div>

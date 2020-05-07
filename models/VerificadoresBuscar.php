@@ -47,7 +47,7 @@ class VerificadoresBuscar extends Verificadores
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             //'sort' =>['defaultOrder' => ['id'=> SORT_DESC]],
-            'pagination' => [ 'pageSize' => 40 ],
+            'pagination' => [ 'pageSize' => 15 ],
         ]);
 
         $this->load($params);
